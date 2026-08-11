@@ -16,6 +16,7 @@ authors:
   - family-names: "Vezzoli"
     given-names: "Andrea"
 title: "Leviathan: STMBJ Control System"
-version: "4.2.1"
+doi: "10.5281/zenodo.XXXXXXX"
+version: "4.1.0"
 date-released: 2026-08-11
 url: "https://github.com/Molecular-Electronics-Liverpool/Leviathan"
