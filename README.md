@@ -27,7 +27,7 @@ If you use this 'Leviathan' software in your research, please cite this specific
 
 ## License
 
-Copyright (C) 2026 James M. F. Morris, R. Tom Abram, Chiara E. Spano, Roberto Listo, Adam Larbi, Zo&eumul; Irlam, and Andrea Vezzoli.
+Copyright (C) 2026 James M. F. Morris, R. Tom Abram, Chiara E. Spano, Roberto Listo, Adam Larbi, Zo&euml; Irlam, and Andrea Vezzoli.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
