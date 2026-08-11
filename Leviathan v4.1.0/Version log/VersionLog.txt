@@ -1,0 +1,118 @@
+v1.0.0 -	Original design based on TA/AV Leviathan prototype.
+		Makes use of SubVIs in self-contained libraries. No GUI.
+
+v2.0.0 -	Utilises a single queue system for three elements rather than
+		a 3 queues to improve performance. No GUI.
+
+v2.1.0 -	Preliminary GUI built.
+
+v2.2.0 -	Ability to disable PID for approach included.
+
+v2.2.1 -	DC bias as constant and zero piezo V included for use during 
+		approach 
+
+v3.0.0 -	GUI modified, test 1 completed and bugs identified. PID off
+		feature added where no Piezo signal is applied but const. bias
+		is. This leads to channel issues as channel needs to be opened
+		and closed convert from dual channel to single channel as well
+		as to allow for fixed and continuous DAQmx functions. However,
+		all tasks must operate at the same sampling rate. Need to sample
+		the cont. data at a lower frequency to improve PID performance
+		while retaining the alternative DAQmx data processing methods.
+
+v3.0.1 -	PID now time dependent not sample dependent to remove aq rate
+		dependency of the PID gains. Some Aq rate local variables
+		removed. Channel controls modified to use fixed values for the
+		ramps but continous values for the PID on/off states (PID does
+		not need to be sampled at a lower frequency any more).
+
+v3.1.0 -	Channel controls separated and tasks now are created and destroyed
+		for the PID/Ramp respectively to avoid reserving DAQmx tasks.
+		
+v3.1.1 -	Memory leak from histograms was detected and seemed to be due to 
+		creating a 3D array to pass into and iterate over in a for loop.
+		3rd dimension was size of input array but this was changed to 1
+		or 0 depending on if input present. This reduced memory usage.
+		I dont think this was a leak so much as a large chunk of memory
+		being reserved.
+
+v3.1.2 -	Stall dataflow included to hopefully remove a bug that causes the
+		DAQmx write finite samples to have time to fully execute the full
+		ramp time.
+
+v3.2.0 -	PID modified to decimate values. Forcing PID to always operate at
+		20 kHz with a moving average 200Hz lowpass filter. Ramp modified
+		to add to the current value of the piezo at the stable PID
+		position to ensure relative movement of the piezo.
+
+v3.2.1 -	PID limited to 5kHz and bandlimiting MA removed to reduce
+		computational demand. Saw a 1.64x increase in available aq rate.
+		This should boost aq speeds up to approx. 60 kHz from 40 kHz.
+
+v3.3.0 -	Included James mode (legacy leviathan). Activated by dissabling
+		the PID and running the ramp as normal. Ramp generalised for
+		expansion as required for new ramps vis.
+
+v3.4.0 - 	GUI changed significantly, overall patches made. Debugging probes
+		remained. PID output was resetting to zero so this was fixed.
+		Some general polish and usability improved.
+
+v3.5.1 -	Addition of Piezo modulation into advanced ramping vi, adding it 
+		to the list of posible measurement types. Addition of case structure
+		system for selecting between bias and piezo modulation experiments
+		fixed bug where #saved files outputs as 0 if file is not saved.
+
+v3.5.2 -	Fixed bug with PM code that only allowed for 10 steps before having 
+		issues with the step ramp due to a mismatch in number of samples.
+		Also adjusted file saving vi to add a column for the sample numbers
+		to match what data crunching code requires.
+
+v3.5.3 - 	fixed number of save files and save file reset issues.
+
+v3.5.4 -	included option to change PM ramp from square to triangle
+		corrected a typo
+
+v3.5.5 - 	Added alpha value analysis in the form of a sine wave (phase = 0)
+		PM function. Changed PM compression length to PM amplitude for clarity.
+
+v3.6.0 -	Addition of automatic sharpening ramp with different height and time.
+		conducts sharpening ramp for 1 in every x number of ramps selected.
+		this required extra addition of a case structure in ramp cases and duplication
+		of ramp task definiton (if the system become less efficient this is why)
+
+v3.6.1 - 	Clean up of sharpening case/controller loop in general.
+
+v3.7.0 -	Modified the write daqmx to take waveform input and changed ramp conversion
+		VI to convert Z and Bias arrays into an array of waveforms to improve precision.
+
+v3.8.0 -	Added the reverse polarity IV to look at histereses in the curves. Useful for Redox
+		junctions etc.
+
+v3.9.0 -	Added CV - 2 terminal to the list of advanced ramp features. This runs a CV style
+		voltage sweep across the bias, useful for monitoring hysteresis.
+
+v3.9.1 -	Fixed dependency issues for SUBvi calls for Channel IO and ramps. (was calling
+		v3.4.0 SUBvis).
+
+v3.9.2 -	Added channel swap delay timer to allow hardware to clear memory before initialising
+		new channel memory addresses. Hopefully should stop channel swapping. increasing wait
+		time should reduce swapping frequency. default 25 ms. Added abs value to the PID Femto
+		In value to avoid PID issues when running DC bias at negative polarity.
+
+v3.9.3 - 	Temp removal of Abs(x) for DC polarity independence for now until understand PID jumping
+		as its possible this I contributing but requires investigation.
+
+v4.0.0 -	Change from simple Producer/Consumer to Producer/2Consumer architecture. Using hardware
+		memory buffer to increase sampling rate to arbitrary speeds. GUI always runs at 20kHz or
+		lower to reduce computational overhead. Femto DLPCA-200 TIA now controlled remotely via
+		software interface. Always defaults to 1E6 upon restart of VI. 
+
+v4.0.1 -	Bug fix of 21.5x multiplier for piezo conversion from internal amplification. Reinsertion
+		of abs(x) for the input of the PID to ensure bipolar DC bias. 
+
+v4.0.2 -	Fix 2CV advanced bias ramp to remove discontinuities by shifting ramp left or right by phase degrees.
+
+v4.1.0 -	Addition of Pre/Post Pulse IVs advanced experiment. still work in progress as it only works when the 
+		ramp length-4*hold lengths is divisible by 3. will have to come up with a fix but should work in
+		certain cases
+	
