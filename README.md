@@ -17,6 +17,6 @@ The complete development history and changes up to the current release can be fo
 
 If you use this 'Leviathan' software in your research, please cite this specific artifact as follows:
 
-> J. M. F. Morris, R. T. Abram, C. E. Spano, R. Listo, A. Larbi, Z. Irlam, and A. Vezzoli (2026). Leviathan: STMBJ Control System (Version 4.2.1). Zenodo. https://doi.org
+> J. M. F. Morris, R. T. Abram, C. E. Spano, R. Listo, A. Larbi, Z. Irlam, and A. Vezzoli (2026). Leviathan: STMBJ Control System (Version 4.1.0). Zenodo. https://doi.org
 
 
