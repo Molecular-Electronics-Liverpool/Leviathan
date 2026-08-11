@@ -6,7 +6,7 @@ LabVIEW codebase for the Leviathan STM-Break Junction.
 
 The Leviathan is a semi-automated scanning tunnelling microscope break junction instrument. This software is a hardware control and data acquisition system for Leviathan. 
 
-###Features:
+### Features:
 
 * A PID feedback controller to re-adjust the piezo between data acquisition chunks (ramps/traces) to compensate for thermal drift.
 
@@ -16,7 +16,7 @@ The Leviathan is a semi-automated scanning tunnelling microscope break junction 
 
 * Multi-producer / multi-consumer architecture for efficient synchronised timing & minimal computational overhead.
 
-* Advanced piezo & bias ramping modes with a modular design architecture for rapid addition of new experiments.
+* Advanced piezo & bias ramping modes with a modular design architecture for rapid addition of new experiments.  
   (e.g. standard STMBJ ramps, current-voltage, piezo holding, piezo-modulation/oscillation, bias-modulation/oscillation, 2-terminal CV sweeps etc...).
 
 ## How to Cite
