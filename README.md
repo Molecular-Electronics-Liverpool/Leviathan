@@ -35,7 +35,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 ## Version History
 
-The complete development history and changes up to the current release can be found in the `versionLog.txt` file included in this repository.
+The complete development history and changes up to the current release can be found in the `Leviathan v4.1.0/versionLog.txt` file included in this repository.
 
 
 
