@@ -18,8 +18,16 @@ After successfully approaching the STM tip to the surface of substrate in consta
 
 ## Front Panel Controls
 
+### Tabbed Interface menu Controls  
+
 The tabbed interface menu on the left hand side contains the majority of the controls for choosing & running experiments.  
 It consists of 5 tabs:  
+
+* Introduction
+* PID Settings
+* STM-BJ
+* Data Analysis Settings
+* Notes
 
 ### Introduction
 
@@ -35,11 +43,32 @@ Contains:
 ### STM-BJ
 
 Contains:  
-* Ramp On/Off: Turns the experiment ramp on or off (default: off).
+* Ramp On/Off: Turns the experiment ramp on or off (default: off).  
+* Ramp Height / nm: The retraction length of the STM tip for standard STMBJ measurements (default: 10 nm).  
+* Offset / nm: The offset of the midpoint (duty-cycle) of the STMBJ ramps (default: 0 nm).
+* Ramp Time / s: The time for each ramp to execute. Together with Ramp Height defines the retraction rate (default: 1 s).
+* Sharpening Depth / nm: The ramp height for the periodic tip sharpening, typically much larger than the ramp height to create fresh tip interface (default: 50 nm).
+* #Traces/Sharpen: the number of traces that are executed between sharpening ramps (default: 200).
+* Sharpening Time / s: The time for each sharpening ramp to execute (default 1 s).
+* Ramp Type: defines which type of ramp (Linear or Advanced Ramps) is being run for quick switching between specialised experiments and default STMBJ experiments (default Linear Ramp).
+* Ramp Time / s: the actual recorder time for each ramp to cycle.
+* Adv BJ Measurement Method: The type of specialised experiment that will be run when 'Advanced Ramps' is chosen in the Ramp type dropdown (default: Piezo hold).
 
-### Data Analysis Settings
+### Data Analysis Settings  
+
+Contains:  
+* Maximum Log(G/G0): Controls conductance histogram bin upper range (default: 0.5).  
+* Minimum Log(G/G0): Controls conductance histogram bin lower range (default: -6).  
+* Maximum Piezo / nm: Controls displacement histogram bin upper range (default: 3.2 nm).  
+* Minimum Piezo / nm: Controls displacement histogram bin lower range (default: -0.25 nm).  
+* 2DHist intensity: Controls the intensity of the 2D conductance-displacement histogram (default: 100).  
+* Upper bound: The upper threshold in Log(G/G0) that must be reached at the beginning of a trace for it to be saved (default: 0.5).  
+* Lower bound: The lower threshold in Log(G/G0) that must be reached at the end of a trace for it to be saved (default: -5).  
+* Ramps plot: Shows the bias and piezo ramps for the advanced STMBJ methods (default: Blank for regular STMBJ).  
 
 
 ### Notes
+
+This section contains different useful notes for selecting parameters for different advanced STMBJ methods as well as any generally useful information.  
 
 
