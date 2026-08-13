@@ -54,6 +54,8 @@ Contains:
 * Ramp Time / s: the actual recorder time for each ramp to cycle.
 * Adv BJ Measurement Method: The type of specialised experiment that will be run when 'Advanced Ramps' is chosen in the Ramp type dropdown (default: Piezo hold).
 
+  Section incomplete!
+   
 ### Data Analysis Settings  
 
 Contains:  
