@@ -1,0 +1,15 @@
+# Force language recognition for LabVIEW files
+*.vi linguist-language=LabVIEW
+*.llb linguist-language=LabVIEW
+*.lvproj linguist-language=LabVIEW
+*.lvclass linguist-language=LabVIEW
+*.lvlib linguist-language=LabVIEW
+*.ctl linguist-language=LabVIEW
+
+# Treat them as binary to prevent Git from altering or corrupting them
+*.vi binary
+*.llb binary
+*.lvproj binary
+*.lvclass binary
+*.lvlib binary
+*.ctl binary
