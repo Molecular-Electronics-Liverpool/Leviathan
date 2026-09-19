@@ -71,6 +71,7 @@ Contains:
 
 ### Notes
 
-This section contains different useful notes for selecting parameters for different advanced STMBJ methods as well as any generally useful information.  
+Contains:
+* Different useful notes for selecting parameters for different advanced STMBJ methods as well as any generally useful information.  
 
 
