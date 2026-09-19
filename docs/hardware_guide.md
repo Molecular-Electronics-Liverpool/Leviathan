@@ -6,7 +6,7 @@ designing their own instruments.
 
 ## Components
 
-* BNC coaxial cables ($\SI{50}{\ohm}$ impedance).
+* BNC coaxial cables ($50{\ohm}$ impedance).
 * Femto DLPCA-200 variable gain amplifier.
 * Agilent 5500 SPM (details to come on scanner specifics etc - currently no longer being sold to my knowledge).
 * National Instruments PXI (Details to come)
