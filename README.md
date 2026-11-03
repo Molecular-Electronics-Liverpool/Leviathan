@@ -23,7 +23,9 @@ The Leviathan is a semi-automated scanning tunnelling microscope break junction 
 
 If you use this 'Leviathan' software or any of its constituent subVIs within in your research, please cite this artifact as follows:
 
-> J. M. F. Morris, R. T. Abram, C. E. Spano, R. Listo, A. Larbi, Z. Irlam, and A. Vezzoli (2026). Leviathan: STMBJ Control System (Version 4.1.0). Zenodo. https://doi.org
+> J. M. F. Morris, R. T. Abram, C. E. Spano, R. Listo, A. Larbi, Z. Irlam, and A. Vezzoli (2026). Leviathan: STMBJ Control System (Version 4.1.0). Zenodo. https://doi.org/10.5281/zenodo.23921467
+
+[![DOI](https://zenodo.org/badge/1331028003.svg)](https://doi.org/10.5281/zenodo.23921466)
 
 ## License
 
