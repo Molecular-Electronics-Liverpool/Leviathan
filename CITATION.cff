@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
   - family-names: "Morris"
-    given-names: "James M. F."
+    given-names: "James M. F."  # Corresponding Author
+    email: "jamesmo@liverpool.ac.uk"
   - family-names: "Abram"
     given-names: "R. Tom"
   - family-names: "Spano"
@@ -14,7 +15,8 @@ authors:
   - family-names: "Irlam"
     given-names: "Zoe"
   - family-names: "Vezzoli"
-    given-names: "Andrea"
+    given-names: "Andrea"      # Corresponding Author
+    email: "Andrea.Vezzoli@liverpool.ac.uk"
 title: "Leviathan: STMBJ Control System"
 doi: 10.5281/zenodo.XXXXXXX
 version: "4.1.0"
